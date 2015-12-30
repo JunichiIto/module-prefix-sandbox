@@ -1,6 +1,5 @@
 class Item < ActiveRecord::Base
+  include MasterTablePrefix
+
   has_many :orders
-  def self.table_name_prefix
-    'm_'
-  end
 end
